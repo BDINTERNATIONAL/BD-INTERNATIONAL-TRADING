@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BD International Trading</title>
   <style>
-    /* সাধারণ বডি স্টাইল */
+    /* General Body Styles */
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
     }
 
-    /* হেডার স্টাইল */
+    /* Header Styles */
     header {
-      background: #004aad;
+      background-color: #004aad;
       color: white;
       padding: 15px;
       text-align: center;
@@ -26,11 +26,11 @@
       margin-right: 10px;
     }
 
-    /* কন্টেইনার স্টাইল */
+    /* Container Styles */
     .container {
       max-width: 800px;
       margin: 40px auto;
-      background: white;
+      background-color: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -42,30 +42,32 @@
       margin-bottom: 20px;
     }
 
-    /* ফর্ম স্টাইল */
+    /* Form Styles */
     form input, form textarea {
       width: 100%;
       margin-bottom: 15px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      box-sizing: border-box;
     }
     form button {
-      background: #004aad;
+      background-color: #004aad;
       color: white;
       border: none;
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
     form button:hover {
-      background: #006aff;
+      background-color: #006aff;
     }
 
-    /* Our Team সেকশন স্টাইল */
+    /* Our Team Section Styles */
     #team {
       padding: 40px 20px;
-      background: #e9e9e9;
+      background-color: #e9e9e9;
     }
     .team-grid {
       display: flex;
@@ -91,6 +93,7 @@
     }
     .member h3 {
       margin: 10px 0 5px 0;
+      font-size: 18px;
     }
     .member p {
       margin: 0;
@@ -98,12 +101,13 @@
       color: #555;
     }
 
-    /* Lightbox overlay */
+    /* Lightbox Styles */
     .lightbox {
       position: fixed;
       top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -124,33 +128,49 @@
       border: none;
       cursor: pointer;
     }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      .team-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .member {
+        width: 80%;
+      }
+      .member img {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- হেডার -->
+
+  <!-- Header -->
   <header>
     <img src="BD LOGO.png" alt="Company Logo">
     <h1>BD International Trading</h1>
   </header>
 
-  <!-- Quotation Form -->
+  <!-- Quotation Request Form -->
   <div class="container">
     <h2>Quotation Request Form</h2>
     <form>
       <label>Company Name:</label>
-      <input type="text" placeholder="Enter company name">
+      <input type="text" placeholder="Enter company name" required>
 
       <label>Contact Person:</label>
-      <input type="text" placeholder="Enter contact name">
+      <input type="text" placeholder="Enter contact name" required>
 
       <label>Email Address:</label>
-      <input type="email" placeholder="Enter email">
+      <input type="email" placeholder="Enter email" required>
 
       <label>Phone Number:</label>
-      <input type="text" placeholder="Enter phone number">
+      <input type="text" placeholder="Enter phone number" required>
 
       <label>Project Details:</label>
-      <textarea rows="5" placeholder="Enter your project or product details"></textarea>
+      <textarea rows="5" placeholder="Enter your project or product details" required></textarea>
 
       <button type="submit">Submit Request</button>
     </form>
@@ -162,15 +182,15 @@
     <div class="team-grid">
       <div class="member">
         <img src="assets/images/md.jpg" alt="Managing Director">
-        <h3>MR. MAMUN</h3>
+        <h3>Mr. Mamun</h3>
         <p>Managing Director</p>
       </div>
       <div class="member">
         <img src="assets/images/engineer-1.jpg" alt="Engineer 1">
-        <h3>Engr. MD ABDUL MALEK</h3>
+        <h3>Engr. MD Abdul Malek</h3>
         <p>Senior Engineer</p>
       </div>
-      <!-- নতুন সদস্য এখানে যোগ করুন -->
+      <!-- Add more team members here if needed -->
     </div>
   </section>
 
